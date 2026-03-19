@@ -1,6 +1,6 @@
 # ClickUp AI Agent (V40 Overhaul) 🚀
 
-A professional, enterprise-grade AI analytics system for ClickUp time-tracking data. Featuring a **Dockerized** architecture, **FastAPI** backend, **Streamlit** web interface, and **LangSmith** observability.
+A professional, enterprise-grade AI analytics system for ClickUp time-tracking data. Featuring a **Dockerized** architecture, **FastAPI** backend, **Streamlit** web interface, and **Sentry** observability.
 
 ![Status](https://img.shields.io/badge/Status-V40_Production-brightgreen)
 ![Architecture](https://img.shields.io/badge/Architecture-LangGraph-orange)
@@ -18,8 +18,8 @@ Optimized for performance and cost:
 *   **GPT-4o-mini**: Orchestration and fast responses.
 *   **GPT-4o**: High-precision SQL generation and complex data reasoning.
 
-### 4. **LLM Observability (LangSmith)** 🔭
-Full request tracing and debugging enabled. See every SQL query and logic step the AI takes in real-time.
+### 4. **Sentry Observability** 🔭
+Full request tracing and error monitoring enabled. See every logic step and query error in real-time.
 
 ---
 
@@ -29,7 +29,7 @@ Full request tracing and debugging enabled. See every SQL query and logic step t
 *   **MCP Server**: [FastMCP](https://github.com/lastmile-ai/mcp) (Data Analyst Tools)
 *   **Frontend**: [Streamlit](https://streamlit.io/)
 *   **Database**: PostgreSQL 16
-*   **Observability**: [Sentry](https://sentry.io/) & [LangSmith](https://smith.langchain.com/)
+*   **Observability**: [Sentry](https://sentry.io/)
 
 ---
 
@@ -42,11 +42,6 @@ OPENAI_API_KEY=your_openai_key
 DB_URL=postgresql://user:pass@localhost:5433/clickup_db
 HOST_DATA_PATH="C:/path/to/your/Timesheets"
 SENTRY_DSN=your_sentry_dsn
-# Optional: LangSmith Tracing
-LANGCHAIN_TRACING_V2=true
-LANGCHAIN_API_KEY=your_langsmith_key
-LANGCHAIN_PROJECT="ClickUp-AI-Agent"
-```
 
 ### 2. Launch Everything (Data + API + UI)
 Run this single command. It will automatically initialize the database, import your local CSVs, and start the Web UI:
