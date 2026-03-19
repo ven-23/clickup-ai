@@ -26,9 +26,10 @@ Full request tracing and debugging enabled. See every SQL query and logic step t
 ## 🛠️ Technology Stack
 *   **Orchestration**: [LangGraph](https://github.com/langchain-ai/langgraph)
 *   **API Framework**: [FastAPI](https://fastapi.tiangolo.com/)
+*   **MCP Server**: [FastMCP](https://github.com/lastmile-ai/mcp) (Data Analyst Tools)
 *   **Frontend**: [Streamlit](https://streamlit.io/)
 *   **Database**: PostgreSQL 16
-*   **Tracing**: LangSmith
+*   **Observability**: [Sentry](https://sentry.io/) & [LangSmith](https://smith.langchain.com/)
 
 ---
 
@@ -37,11 +38,14 @@ Full request tracing and debugging enabled. See every SQL query and logic step t
 ### 1. Environment Setup
 Create a `.env` file in the root:
 ```env
-OPENAI_API_KEY=your_key_here
+OPENAI_API_KEY=your_openai_key
+DB_URL=postgresql://user:pass@localhost:5433/clickup_db
+HOST_DATA_PATH="C:/path/to/your/Timesheets"
+SENTRY_DSN=your_sentry_dsn
+# Optional: LangSmith Tracing
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_API_KEY=your_langsmith_key
 LANGCHAIN_PROJECT="ClickUp-AI-Agent"
-HOST_DATA_PATH="C:/absolute/path/to/your/Timesheets"
 ```
 
 ### 2. Launch Everything (Data + API + UI)
