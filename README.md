@@ -64,6 +64,3 @@ pytest tests/
 ```
 
 ---
-
-## 📜 License & Acknowledgments
-Built with 🧠 by Antigravity. For organizational data analysis demo.
