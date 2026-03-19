@@ -1,0 +1,13 @@
+langchain
+langgraph
+langchain-openai
+psycopg2-binary
+python-dotenv
+pandas
+fastapi
+uvicorn
+streamlit
+sqlalchemy
+requests
+sentry-sdk
+mcp[build]
