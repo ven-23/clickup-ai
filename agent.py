@@ -24,7 +24,7 @@ import mcp_server
 # Load environment variables
 load_dotenv()
 
-# LangChain Tracing (Removed to minimize costs)
+
 
 import operator
 from typing import Annotated, TypedDict, List, Union
@@ -50,7 +50,6 @@ model_with_tools = model.bind_tools(tools)
 # 1. Query Generation Node
 def generate_sql(state: AgentState):
     """Analyzes the user request and generates optimized SQL queries."""
-    # ... (rest of the code remains the same but uses heavy_model)
     user_query = ""
     for m in reversed(state['messages']):
         if isinstance(m, HumanMessage):
